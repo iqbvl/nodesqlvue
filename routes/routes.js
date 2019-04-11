@@ -34,5 +34,5 @@ router.post('/adminlogin', function (req, res) {
     }
   })
 })
-
+ 
 module.exports = router
