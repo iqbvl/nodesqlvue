@@ -1,0 +1,68 @@
+{
+    "development": {
+        "id": "dev", 
+        "node_port" : 3000,
+        "database": {
+            "connection" : {
+                "userName": "sa",
+                "password": "Password123!!",
+                "server": "localhost",
+                "options" :{
+                    "encrypt": true, 
+                    "database": "IcalanDB",
+                    "port":50152,
+                    "rowCollectionOnDone": true
+                }
+            },
+            "connectionPool" : {
+                "min": 1,
+                "max": 4,
+                "log": true
+            }
+        }
+    },
+    "testing": {
+        "id": "test",  
+        "node_port" : 8081,
+        "database": {
+            "connection" : {
+                "userName": "sa",
+                "password": "Password123!!",
+                "server": "localhost",
+                "options" :{
+                    "encrypt": true, 
+                    "database": "IcalanDB",
+                    "port":50152,
+                    "rowCollectionOnDone": true
+                }
+            },
+            "connectionPool" : {
+                "min": 2,
+                "max": 4,
+                "log": true
+            }
+        }
+    }, 
+    "production": {
+        "id": "prod",  
+        "node_port" : 8080,
+        "database": {
+            "connection" : {
+                "userName": "sa",
+                "password": "Password123!!",
+                "server": "localhost",
+                "options" :{
+                    "encrypt": true, 
+                    "database": "IcalanDB",
+                    "port":50152,
+                    "rowCollectionOnDone": true
+                }
+            },
+            "connectionPool" : {
+                "min": 2,
+                "max": 4,
+                "log": true
+            }
+        }
+    }
+}
