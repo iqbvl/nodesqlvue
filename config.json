@@ -11,7 +11,8 @@
                     "encrypt": true, 
                     "database": "IcalanDB",
                     "port":50152,
-                    "rowCollectionOnDone": true
+                    "rowCollectionOnDone": true,
+                    "rowCollectionOnRequestCompletion" :true
                 }
             },
             "connectionPool" : {
@@ -19,7 +20,8 @@
                 "max": 4,
                 "log": true
             }
-        }
+        },
+        "keyofsecret" : "3D6EFCC53F39478987D5927B9DE1DBFA"
     },
     "testing": {
         "id": "test",  

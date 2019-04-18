@@ -3,6 +3,7 @@ const connection = require('../../../lib/connection-db').Connection()
 const Request = require('tedious').Request
 const TYPES = require('tedious').TYPES
 var exports = module.exports = {};
+const adminUserModel = require("../../../models/AdminUser")
 
 exports.CheckUsernamePassword = function(username, password, response){ 
     var result = false;
@@ -38,4 +39,4 @@ exports.CheckUsernamePassword = function(username, password, response){
     
         connection.execSql(request)   
     })
-}
+} 

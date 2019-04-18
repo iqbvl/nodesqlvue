@@ -5,6 +5,7 @@ const logger = require('./lib/logger')
 var route = require('./routes/routes')
 const config = require('./lib/config')
 
+
 process.env.LOG_LEVEL = 'info'
 process.env.NODE_ENV = 'development'
 port = global.gConfig.node_port;
