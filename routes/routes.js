@@ -6,12 +6,18 @@ var auth = require('../middleware/authenticate')
 const logger = require('../lib/logger')
 const appTime = require('../lib/helper')
 
+var path = require("path");
+
 // middleware that is specific to this router
 router.use(function timeLog (req, res, next) {
 // console.log('Request Time: ', appTime.Now())
 logger.log(process.env.LOG_LEVEL, 'Request Time :' + appTime.Now())
 next()
 })  
+
+router.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname+'/index.html'));
+})
 
 router.post('/testpost', function (req, res) {
     var response = "Hello my name is " + req.body.Name + " and i live in " + req.body.Address + " and this is my message : " + req.body.Message
